@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+* {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+}
+
+/* button:focus{
+    border: none;
+    outline: none;
+} */
+
+button {
+    outline: none;
+    border: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: rgb(156, 152, 96) url(/bg/0.jpg) no-repeat center/cover;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body.win{
+    background: url(./img/win.jpg) no-repeat center/cover;
+}
+
+#tablo {
+    background: rgb(235, 235, 28);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    left: 40px;
+    top: 40px;
+    box-shadow: 0 0 20px 20px rgb(239, 243, 9);
+    position: fixed;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .70s;
+}
+
+#tablo.gameStart {
+    background: url(./img/start.gif) no-repeat center/cover;
+    font-size: 0;
+}
+
+#tablo.gameOver {
+    background: url(./img/gameover.jpg) no-repeat center/cover;
+    font-size: 0;
+}
+
+@keyframes text {
+    from {
+        /* box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2); */
+        color: rgb(255, 254, 254);
+    }
+    to {
+        /* box-shadow: 0 0 0 35px rgba(0, 0, 0, 0); */
+        color: red;
+    }
+}
+
+#tablo:hover {
+    box-shadow: 0 0 20px 20px rgb(189, 78, 44);
+}
+
+#tablo span {
+    color: #fff;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+#fieldsGame {
+    /* border: 1px solid red; */
+    padding: 40px; 
+    background: rgba(192, 140, 140,.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    /* overflow: hidden; */
+}
+
+.box {
+    /* border: 1px solid #000; */
+    width: 100px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .80s;
+}
+
+.commonStyles {
+    width: 100%;
+    height: inherit;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.backCard {
+    background: url(./img/BackCard.jpg) no-repeat center/cover;
+    z-index: 100;
+    backface-visibility: hidden;
+}
+
+.frontCard {
+    /* background:red; */
+    text-align: center;
+    transform: scaleX(-1);
+}
+
+.rotateCard {
+    transform: rotateY(190deg);
+}
+
+#soundOff{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 100%;
+    background: url(./img/on.png) no-repeat center/cover;
+    width: 50px;
+    height: 50px;
+}
+
+#soundOff.soundOff{
+    background: url(./img/off.png) no-repeat center/cover;
+}
