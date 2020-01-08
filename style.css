@@ -19,7 +19,7 @@ body {
     padding: 0;
     min-width: 100vw;
     min-height: 100vh;
-    /* background: rgb(204, 204, 40) url(/3.jpg) no-repeat center/cover; */
+    background: url(bg/bg.jpg) no-repeat center/cover;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
     display: flex;
