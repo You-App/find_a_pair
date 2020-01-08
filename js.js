@@ -3,7 +3,7 @@ var tablo = document.querySelector('#tablo')
 var btnSound = document.getElementById('soundOff')
 var audio = document.getElementById('audio1');
 
-
+document.body.style.background = 'rgb(204, 204, 40) url(/3.jpg) no-repeat center/cover';
 
 var set = new Set()
 var def = { max: 2, x: 2, startFunc: true, blockGame: false, stopTimer: false }
