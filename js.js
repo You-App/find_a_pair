@@ -36,7 +36,7 @@ function gameTimer() {
     set.clear()
     initGame()
 
-    
+
 
     interval = setInterval(() => {
         if (def.timer <= 0 && def.stopTimer != true) {
@@ -119,9 +119,9 @@ function game() {
     if (set.size > 1 && [...set][0].dataset.num == [...set][1].dataset.num) {
         for (const elem of set) {
             elem.disabled = true
-            
+
             def.timer += 15
-            
+
         }
         playAudio('dzin1.mp3')
         set.clear()
@@ -139,13 +139,13 @@ function game() {
         stopFunc(box, false)
     }
 
-    
+
 
 
     if (def.x <= 0) {
         def.stopTimer = true
         setTimeout(() => {
-            document.body.style.background = `url(bg/${Math.floor(getRandomArbitrary(0, 5))}.jpg) no-repeat center/cover`
+            // document.body.style.background = `url(bg/${Math.floor(getRandomArbitrary(0, 5))}.jpg) no-repeat center/cover`
 
             if (def.max < 46) {
 
@@ -176,8 +176,6 @@ function game() {
 
 }
 
-
-var bg = [0,1,2,3,4,5]
 
 function createElements(main, className) {
     var div = document.createElement('button')

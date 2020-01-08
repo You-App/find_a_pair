@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: rgb(156, 152, 96) url(/bg/0.jpg) no-repeat center/cover;
+    background: rgb(48, 48, 45) url(/bg/0.jpg) no-repeat center/cover;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
     display: flex;
